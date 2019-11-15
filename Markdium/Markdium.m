@@ -32,14 +32,14 @@ static void cmarkEnableGFM(cmark_parser *parser) {
     cmark_parser_attach_syntax_extension(parser, table);
 }
 
-static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
+static cmark_node *cmarkParseString(NSString *string, int options, BOOL gfm) {
     if (!string) {
         return NULL;
     }
 
     cmarkGFMCoreExtensionsEnsureRegistered();
 
-    cmark_parser *parser = cmark_parser_new(CMARK_OPT_DEFAULT);
+    cmark_parser *parser = cmark_parser_new(options);
     if (!parser) {
         return NULL;
     }
@@ -58,6 +58,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 @interface Markdium ()
 
+@property(nonatomic, assign) NSInteger options;
 @property(nonatomic, unsafe_unretained) cmark_node *rootNode;
 
 @end
@@ -71,12 +72,14 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 }
 
 - (instancetype)initWithString:(NSString *)string enableGFM:(BOOL)gfm {
-    cmark_node *node = cmarkParseString(string, gfm);
+    int options = CMARK_OPT_SAFE | CMARK_OPT_HARDBREAKS | CMARK_OPT_SMART;
+    cmark_node *node = cmarkParseString(string, options, gfm);
     if (!node) {
         return nil;
     }
 
     if (self = [super init]) {
+        _options = options;
         _rootNode = node;
     }
 
@@ -89,7 +92,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 - (NSString *)renderAsHTML {
     NSString *output = nil;
-    char *html = cmark_render_html(self.rootNode, CMARK_OPT_SAFE, NULL);
+    char *html = cmark_render_html(self.rootNode, (int)self.options, NULL);
     if (html) {
         output = [NSString stringWithUTF8String:html];
         free(html);
@@ -100,7 +103,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 - (NSString *)renderAsXML {
     NSString *output = nil;
-    char *xml = cmark_render_xml(self.rootNode, CMARK_OPT_SAFE);
+    char *xml = cmark_render_xml(self.rootNode, (int)self.options);
     if (xml) {
         output = [NSString stringWithUTF8String:xml];
         free(xml);
@@ -111,7 +114,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 - (NSString *)renderAsMAN {
     NSString *output = nil;
-    char *man = cmark_render_man(self.rootNode, CMARK_OPT_SAFE, self.width);
+    char *man = cmark_render_man(self.rootNode, (int)self.options, (int)self.width);
     if (man) {
         output = [NSString stringWithUTF8String:man];
         free(man);
@@ -122,7 +125,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 - (NSString *)renderAsLatex {
     NSString *output = nil;
-    char *latex = cmark_render_latex(self.rootNode, CMARK_OPT_SAFE, self.width);
+    char *latex = cmark_render_latex(self.rootNode, (int)self.options, (int)self.width);
     if (latex) {
         output = [NSString stringWithUTF8String:latex];
         free(latex);
@@ -133,7 +136,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 - (NSString *)renderAsCommonMark {
     NSString *output = nil;
-    char *md = cmark_render_commonmark(self.rootNode, CMARK_OPT_SAFE, self.width);
+    char *md = cmark_render_commonmark(self.rootNode, (int)self.options, (int)self.width);
     if (md) {
         output = [NSString stringWithUTF8String:md];
         free(md);
@@ -144,7 +147,7 @@ static cmark_node *cmarkParseString(NSString *string, BOOL gfm) {
 
 - (NSString *)renderAsPlaintext {
     NSString *output = nil;
-    char *md = cmark_render_plaintext(self.rootNode, CMARK_OPT_SAFE, self.width);
+    char *md = cmark_render_plaintext(self.rootNode, (int)self.options, (int)self.width);
     if (md) {
         output = [NSString stringWithUTF8String:md];
         free(md);
