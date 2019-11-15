@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15640120237E9C6100F8CD81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1564011F237E9C6100F8CD81 /* main.m */; };
+		15640127237E9C8100F8CD81 /* Markdium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FC6511237E4EF700B5DFB0 /* Markdium.framework */; };
 		15FC6516237E4EF700B5DFB0 /* Markdium.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6514237E4EF700B5DFB0 /* Markdium.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15FC65B0237E526800B5DFB0 /* cmark-gfm_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC65AD237E526800B5DFB0 /* cmark-gfm_version.h */; };
 		15FC65B1237E526800B5DFB0 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC65AE237E526800B5DFB0 /* config.h */; };
@@ -56,7 +58,6 @@
 		15FC6880237E5DA000B5DFB0 /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6728237E5DA000B5DFB0 /* arena.c */; };
 		15FC6881237E5DA000B5DFB0 /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6729237E5DA000B5DFB0 /* cmark_ctype.h */; };
 		15FC6882237E5DA000B5DFB0 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC672A237E5DA000B5DFB0 /* buffer.h */; };
-		15FC6883237E5DA000B5DFB0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672B237E5DA000B5DFB0 /* main.c */; };
 		15FC6884237E5DA000B5DFB0 /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672C237E5DA000B5DFB0 /* linked_list.c */; };
 		15FC6885237E5DA000B5DFB0 /* syntax_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC672D237E5DA000B5DFB0 /* syntax_extension.h */; };
 		15FC6886237E5DA000B5DFB0 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672E237E5DA000B5DFB0 /* commonmark.c */; };
@@ -78,7 +79,31 @@
 		15FC689A237E684E00B5DFB0 /* Markdium-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6899237E684E00B5DFB0 /* Markdium-Prefix.pch */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		15640124237E9C7B00F8CD81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15FC6508237E4EF700B5DFB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15FC6510237E4EF700B5DFB0;
+			remoteInfo = Markdium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1564011B237E9C6100F8CD81 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1564011D237E9C6100F8CD81 /* cmark-gfm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cmark-gfm"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1564011F237E9C6100F8CD81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15FC6511237E4EF700B5DFB0 /* Markdium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Markdium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FC6514237E4EF700B5DFB0 /* Markdium.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Markdium.h; sourceTree = "<group>"; };
 		15FC6515237E4EF700B5DFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +155,6 @@
 		15FC6728237E5DA000B5DFB0 /* arena.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arena.c; sourceTree = "<group>"; };
 		15FC6729237E5DA000B5DFB0 /* cmark_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark_ctype.h; sourceTree = "<group>"; };
 		15FC672A237E5DA000B5DFB0 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
-		15FC672B237E5DA000B5DFB0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		15FC672C237E5DA000B5DFB0 /* linked_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linked_list.c; sourceTree = "<group>"; };
 		15FC672D237E5DA000B5DFB0 /* syntax_extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syntax_extension.h; sourceTree = "<group>"; };
 		15FC672E237E5DA000B5DFB0 /* commonmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commonmark.c; sourceTree = "<group>"; };
@@ -153,6 +177,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1564011A237E9C6100F8CD81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15640127237E9C8100F8CD81 /* Markdium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15FC650E237E4EF700B5DFB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,11 +195,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1564011E237E9C6100F8CD81 /* cmark-gfm */ = {
+			isa = PBXGroup;
+			children = (
+				1564011F237E9C6100F8CD81 /* main.m */,
+			);
+			path = "cmark-gfm";
+			sourceTree = "<group>";
+		};
+		15640126237E9C8100F8CD81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15FC6507237E4EF700B5DFB0 = {
 			isa = PBXGroup;
 			children = (
 				15FC6513237E4EF700B5DFB0 /* Markdium */,
+				1564011E237E9C6100F8CD81 /* cmark-gfm */,
 				15FC6512237E4EF700B5DFB0 /* Products */,
+				15640126237E9C8100F8CD81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				15FC6511237E4EF700B5DFB0 /* Markdium.framework */,
+				1564011D237E9C6100F8CD81 /* cmark-gfm */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,7 +303,6 @@
 				15FC6738237E5DA000B5DFB0 /* iterator.h */,
 				15FC6714237E5DA000B5DFB0 /* latex.c */,
 				15FC672C237E5DA000B5DFB0 /* linked_list.c */,
-				15FC672B237E5DA000B5DFB0 /* main.c */,
 				15FC670C237E5DA000B5DFB0 /* man.c */,
 				15FC672F237E5DA000B5DFB0 /* map.c */,
 				15FC6717237E5DA000B5DFB0 /* map.h */,
@@ -326,6 +375,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1564011C237E9C6100F8CD81 /* cmark-gfm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15640121237E9C6100F8CD81 /* Build configuration list for PBXNativeTarget "cmark-gfm" */;
+			buildPhases = (
+				15640119237E9C6100F8CD81 /* Sources */,
+				1564011A237E9C6100F8CD81 /* Frameworks */,
+				1564011B237E9C6100F8CD81 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15640125237E9C7B00F8CD81 /* PBXTargetDependency */,
+			);
+			name = "cmark-gfm";
+			productName = "cmark-gfm";
+			productReference = 1564011D237E9C6100F8CD81 /* cmark-gfm */;
+			productType = "com.apple.product-type.tool";
+		};
 		15FC6510237E4EF700B5DFB0 /* Markdium */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15FC6519237E4EF700B5DFB0 /* Build configuration list for PBXNativeTarget "Markdium" */;
@@ -353,6 +420,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = lvv;
 				TargetAttributes = {
+					1564011C237E9C6100F8CD81 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					15FC6510237E4EF700B5DFB0 = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
@@ -373,6 +443,7 @@
 			projectRoot = "";
 			targets = (
 				15FC6510237E4EF700B5DFB0 /* Markdium */,
+				1564011C237E9C6100F8CD81 /* cmark-gfm */,
 			);
 		};
 /* End PBXProject section */
@@ -388,6 +459,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		15640119237E9C6100F8CD81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15640120237E9C6100F8CD81 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15FC650D237E4EF700B5DFB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,7 +476,6 @@
 				15FC6786237E5DA000B5DFB0 /* table.c in Sources */,
 				15FC6884237E5DA000B5DFB0 /* linked_list.c in Sources */,
 				15FC687E237E5DA000B5DFB0 /* iterator.c in Sources */,
-				15FC6883237E5DA000B5DFB0 /* main.c in Sources */,
 				15FC6862237E5DA000B5DFB0 /* cmark.c in Sources */,
 				15FC6869237E5DA000B5DFB0 /* inlines.c in Sources */,
 				15FC686C237E5DA000B5DFB0 /* latex.c in Sources */,
@@ -433,7 +511,37 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		15640125237E9C7B00F8CD81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15FC6510237E4EF700B5DFB0 /* Markdium */;
+			targetProxy = 15640124237E9C7B00F8CD81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		15640122237E9C6100F8CD81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		15640123237E9C6100F8CD81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		15FC6517237E4EF700B5DFB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -658,6 +766,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		15640121237E9C6100F8CD81 /* Build configuration list for PBXNativeTarget "cmark-gfm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15640122237E9C6100F8CD81 /* Debug */,
+				15640123237E9C6100F8CD81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		15FC650B237E4EF700B5DFB0 /* Build configuration list for PBXProject "Markdium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
