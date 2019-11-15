@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15FC6516237E4EF700B5DFB0 /* Markdium.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6514237E4EF700B5DFB0 /* Markdium.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15FC65B0237E526800B5DFB0 /* cmark-gfm_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC65AD237E526800B5DFB0 /* cmark-gfm_version.h */; };
+		15FC65B1237E526800B5DFB0 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC65AE237E526800B5DFB0 /* config.h */; };
+		15FC65B2237E526800B5DFB0 /* cmark-gfm_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC65AF237E526800B5DFB0 /* cmark-gfm_export.h */; };
+		15FC65B4237E528D00B5DFB0 /* cmark-gfm-extensions_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC65B3237E528D00B5DFB0 /* cmark-gfm-extensions_export.h */; };
+		15FC65B6237E532300B5DFB0 /* Markdium.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FC65B5237E532300B5DFB0 /* Markdium.m */; };
+		15FC6783237E5DA000B5DFB0 /* strikethrough.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6609237E5D9F00B5DFB0 /* strikethrough.c */; };
+		15FC6784237E5DA000B5DFB0 /* cmark-gfm-core-extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC660A237E5D9F00B5DFB0 /* cmark-gfm-core-extensions.h */; };
+		15FC6785237E5DA000B5DFB0 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC660B237E5D9F00B5DFB0 /* autolink.c */; };
+		15FC6786237E5DA000B5DFB0 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC660C237E5D9F00B5DFB0 /* table.c */; };
+		15FC6788237E5DA000B5DFB0 /* tasklist.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC660E237E5D9F00B5DFB0 /* tasklist.h */; };
+		15FC6789237E5DA000B5DFB0 /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC660F237E5D9F00B5DFB0 /* ext_scanners.c */; };
+		15FC678A237E5DA000B5DFB0 /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6610237E5D9F00B5DFB0 /* tagfilter.c */; };
+		15FC678B237E5DA000B5DFB0 /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6611237E5D9F00B5DFB0 /* autolink.h */; };
+		15FC678C237E5DA000B5DFB0 /* strikethrough.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6612237E5D9F00B5DFB0 /* strikethrough.h */; };
+		15FC678E237E5DA000B5DFB0 /* tasklist.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6614237E5D9F00B5DFB0 /* tasklist.c */; };
+		15FC678F237E5DA000B5DFB0 /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6615237E5D9F00B5DFB0 /* table.h */; };
+		15FC6790237E5DA000B5DFB0 /* tagfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6616237E5D9F00B5DFB0 /* tagfilter.h */; };
+		15FC6791237E5DA000B5DFB0 /* ext_scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6617237E5D9F00B5DFB0 /* ext_scanners.h */; };
+		15FC6792237E5DA000B5DFB0 /* core-extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6618237E5D9F00B5DFB0 /* core-extensions.c */; };
+		15FC6861237E5DA000B5DFB0 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6709237E5DA000B5DFB0 /* xml.c */; };
+		15FC6862237E5DA000B5DFB0 /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC670A237E5DA000B5DFB0 /* cmark.c */; };
+		15FC6864237E5DA000B5DFB0 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC670C237E5DA000B5DFB0 /* man.c */; };
+		15FC6865237E5DA000B5DFB0 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC670D237E5DA000B5DFB0 /* buffer.c */; };
+		15FC6866237E5DA000B5DFB0 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC670E237E5DA000B5DFB0 /* blocks.c */; };
+		15FC6867237E5DA000B5DFB0 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC670F237E5DA000B5DFB0 /* cmark_ctype.c */; };
+		15FC6868237E5DA000B5DFB0 /* html.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6710237E5DA000B5DFB0 /* html.h */; };
+		15FC6869237E5DA000B5DFB0 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6711237E5DA000B5DFB0 /* inlines.c */; };
+		15FC686B237E5DA000B5DFB0 /* plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6713237E5DA000B5DFB0 /* plugin.h */; };
+		15FC686C237E5DA000B5DFB0 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6714237E5DA000B5DFB0 /* latex.c */; };
+		15FC686D237E5DA000B5DFB0 /* cmark-gfm-extension_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6715237E5DA000B5DFB0 /* cmark-gfm-extension_api.h */; };
+		15FC686E237E5DA000B5DFB0 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6716237E5DA000B5DFB0 /* houdini_href_e.c */; };
+		15FC686F237E5DA000B5DFB0 /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6717237E5DA000B5DFB0 /* map.h */; };
+		15FC6870237E5DA000B5DFB0 /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6718237E5DA000B5DFB0 /* chunk.h */; };
+		15FC6871237E5DA000B5DFB0 /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6719237E5DA000B5DFB0 /* syntax_extension.c */; };
+		15FC6874237E5DA000B5DFB0 /* footnotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC671C237E5DA000B5DFB0 /* footnotes.h */; };
+		15FC6875237E5DA000B5DFB0 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC671D237E5DA000B5DFB0 /* parser.h */; };
+		15FC6876237E5DA000B5DFB0 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC671E237E5DA000B5DFB0 /* houdini_html_e.c */; };
+		15FC6877237E5DA000B5DFB0 /* plaintext.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC671F237E5DA000B5DFB0 /* plaintext.c */; };
+		15FC6878237E5DA000B5DFB0 /* scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6720237E5DA000B5DFB0 /* scanners.h */; };
+		15FC687A237E5DA000B5DFB0 /* node.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6722237E5DA000B5DFB0 /* node.h */; };
+		15FC687B237E5DA000B5DFB0 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6723237E5DA000B5DFB0 /* utf8.c */; };
+		15FC687C237E5DA000B5DFB0 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6724237E5DA000B5DFB0 /* references.c */; };
+		15FC687D237E5DA000B5DFB0 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6725237E5DA000B5DFB0 /* render.c */; };
+		15FC687E237E5DA000B5DFB0 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6726237E5DA000B5DFB0 /* iterator.c */; };
+		15FC687F237E5DA000B5DFB0 /* registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6727237E5DA000B5DFB0 /* registry.h */; };
+		15FC6880237E5DA000B5DFB0 /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6728237E5DA000B5DFB0 /* arena.c */; };
+		15FC6881237E5DA000B5DFB0 /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6729237E5DA000B5DFB0 /* cmark_ctype.h */; };
+		15FC6882237E5DA000B5DFB0 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC672A237E5DA000B5DFB0 /* buffer.h */; };
+		15FC6883237E5DA000B5DFB0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672B237E5DA000B5DFB0 /* main.c */; };
+		15FC6884237E5DA000B5DFB0 /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672C237E5DA000B5DFB0 /* linked_list.c */; };
+		15FC6885237E5DA000B5DFB0 /* syntax_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC672D237E5DA000B5DFB0 /* syntax_extension.h */; };
+		15FC6886237E5DA000B5DFB0 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672E237E5DA000B5DFB0 /* commonmark.c */; };
+		15FC6887237E5DA000B5DFB0 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC672F237E5DA000B5DFB0 /* map.c */; };
+		15FC6888237E5DA000B5DFB0 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6730237E5DA000B5DFB0 /* html.c */; };
+		15FC6889237E5DA000B5DFB0 /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6731237E5DA000B5DFB0 /* plugin.c */; };
+		15FC688A237E5DA000B5DFB0 /* inlines.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6732237E5DA000B5DFB0 /* inlines.h */; };
+		15FC688C237E5DA000B5DFB0 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6734237E5DA000B5DFB0 /* scanners.c */; };
+		15FC688D237E5DA000B5DFB0 /* cmark-gfm.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6735237E5DA000B5DFB0 /* cmark-gfm.h */; };
+		15FC688E237E5DA000B5DFB0 /* footnotes.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6736237E5DA000B5DFB0 /* footnotes.c */; };
+		15FC688F237E5DA000B5DFB0 /* houdini.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6737237E5DA000B5DFB0 /* houdini.h */; };
+		15FC6890237E5DA000B5DFB0 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6738237E5DA000B5DFB0 /* iterator.h */; };
+		15FC6891237E5DA000B5DFB0 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC6739237E5DA000B5DFB0 /* houdini_html_u.c */; };
+		15FC6892237E5DA000B5DFB0 /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC673A237E5DA000B5DFB0 /* registry.c */; };
+		15FC6893237E5DA000B5DFB0 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC673B237E5DA000B5DFB0 /* utf8.h */; };
+		15FC6894237E5DA000B5DFB0 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 15FC673C237E5DA000B5DFB0 /* node.c */; };
+		15FC6895237E5DA000B5DFB0 /* references.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC673D237E5DA000B5DFB0 /* references.h */; };
+		15FC6896237E5DA000B5DFB0 /* render.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC673E237E5DA000B5DFB0 /* render.h */; };
+		15FC689A237E684E00B5DFB0 /* Markdium-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6899237E684E00B5DFB0 /* Markdium-Prefix.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15FC6511237E4EF700B5DFB0 /* Markdium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Markdium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15FC6514237E4EF700B5DFB0 /* Markdium.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Markdium.h; sourceTree = "<group>"; };
+		15FC6515237E4EF700B5DFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15FC65AD237E526800B5DFB0 /* cmark-gfm_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm_version.h"; sourceTree = "<group>"; };
+		15FC65AE237E526800B5DFB0 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		15FC65AF237E526800B5DFB0 /* cmark-gfm_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm_export.h"; sourceTree = "<group>"; };
+		15FC65B3237E528D00B5DFB0 /* cmark-gfm-extensions_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-extensions_export.h"; sourceTree = "<group>"; };
+		15FC65B5237E532300B5DFB0 /* Markdium.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Markdium.m; sourceTree = "<group>"; };
+		15FC6609237E5D9F00B5DFB0 /* strikethrough.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strikethrough.c; sourceTree = "<group>"; };
+		15FC660A237E5D9F00B5DFB0 /* cmark-gfm-core-extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-core-extensions.h"; sourceTree = "<group>"; };
+		15FC660B237E5D9F00B5DFB0 /* autolink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = autolink.c; sourceTree = "<group>"; };
+		15FC660C237E5D9F00B5DFB0 /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = table.c; sourceTree = "<group>"; };
+		15FC660E237E5D9F00B5DFB0 /* tasklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tasklist.h; sourceTree = "<group>"; };
+		15FC660F237E5D9F00B5DFB0 /* ext_scanners.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ext_scanners.c; sourceTree = "<group>"; };
+		15FC6610237E5D9F00B5DFB0 /* tagfilter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tagfilter.c; sourceTree = "<group>"; };
+		15FC6611237E5D9F00B5DFB0 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		15FC6612237E5D9F00B5DFB0 /* strikethrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strikethrough.h; sourceTree = "<group>"; };
+		15FC6614237E5D9F00B5DFB0 /* tasklist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tasklist.c; sourceTree = "<group>"; };
+		15FC6615237E5D9F00B5DFB0 /* table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table.h; sourceTree = "<group>"; };
+		15FC6616237E5D9F00B5DFB0 /* tagfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tagfilter.h; sourceTree = "<group>"; };
+		15FC6617237E5D9F00B5DFB0 /* ext_scanners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ext_scanners.h; sourceTree = "<group>"; };
+		15FC6618237E5D9F00B5DFB0 /* core-extensions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "core-extensions.c"; sourceTree = "<group>"; };
+		15FC6709237E5DA000B5DFB0 /* xml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xml.c; sourceTree = "<group>"; };
+		15FC670A237E5DA000B5DFB0 /* cmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmark.c; sourceTree = "<group>"; };
+		15FC670C237E5DA000B5DFB0 /* man.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = man.c; sourceTree = "<group>"; };
+		15FC670D237E5DA000B5DFB0 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = buffer.c; sourceTree = "<group>"; };
+		15FC670E237E5DA000B5DFB0 /* blocks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blocks.c; sourceTree = "<group>"; };
+		15FC670F237E5DA000B5DFB0 /* cmark_ctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmark_ctype.c; sourceTree = "<group>"; };
+		15FC6710237E5DA000B5DFB0 /* html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = html.h; sourceTree = "<group>"; };
+		15FC6711237E5DA000B5DFB0 /* inlines.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inlines.c; sourceTree = "<group>"; };
+		15FC6713237E5DA000B5DFB0 /* plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.h; sourceTree = "<group>"; };
+		15FC6714237E5DA000B5DFB0 /* latex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = latex.c; sourceTree = "<group>"; };
+		15FC6715237E5DA000B5DFB0 /* cmark-gfm-extension_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-extension_api.h"; sourceTree = "<group>"; };
+		15FC6716237E5DA000B5DFB0 /* houdini_href_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_href_e.c; sourceTree = "<group>"; };
+		15FC6717237E5DA000B5DFB0 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
+		15FC6718237E5DA000B5DFB0 /* chunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chunk.h; sourceTree = "<group>"; };
+		15FC6719237E5DA000B5DFB0 /* syntax_extension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = syntax_extension.c; sourceTree = "<group>"; };
+		15FC671C237E5DA000B5DFB0 /* footnotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = footnotes.h; sourceTree = "<group>"; };
+		15FC671D237E5DA000B5DFB0 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		15FC671E237E5DA000B5DFB0 /* houdini_html_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_html_e.c; sourceTree = "<group>"; };
+		15FC671F237E5DA000B5DFB0 /* plaintext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plaintext.c; sourceTree = "<group>"; };
+		15FC6720237E5DA000B5DFB0 /* scanners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanners.h; sourceTree = "<group>"; };
+		15FC6722237E5DA000B5DFB0 /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		15FC6723237E5DA000B5DFB0 /* utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf8.c; sourceTree = "<group>"; };
+		15FC6724237E5DA000B5DFB0 /* references.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = references.c; sourceTree = "<group>"; };
+		15FC6725237E5DA000B5DFB0 /* render.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = render.c; sourceTree = "<group>"; };
+		15FC6726237E5DA000B5DFB0 /* iterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iterator.c; sourceTree = "<group>"; };
+		15FC6727237E5DA000B5DFB0 /* registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registry.h; sourceTree = "<group>"; };
+		15FC6728237E5DA000B5DFB0 /* arena.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arena.c; sourceTree = "<group>"; };
+		15FC6729237E5DA000B5DFB0 /* cmark_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark_ctype.h; sourceTree = "<group>"; };
+		15FC672A237E5DA000B5DFB0 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		15FC672B237E5DA000B5DFB0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		15FC672C237E5DA000B5DFB0 /* linked_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linked_list.c; sourceTree = "<group>"; };
+		15FC672D237E5DA000B5DFB0 /* syntax_extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syntax_extension.h; sourceTree = "<group>"; };
+		15FC672E237E5DA000B5DFB0 /* commonmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commonmark.c; sourceTree = "<group>"; };
+		15FC672F237E5DA000B5DFB0 /* map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = map.c; sourceTree = "<group>"; };
+		15FC6730237E5DA000B5DFB0 /* html.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html.c; sourceTree = "<group>"; };
+		15FC6731237E5DA000B5DFB0 /* plugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plugin.c; sourceTree = "<group>"; };
+		15FC6732237E5DA000B5DFB0 /* inlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inlines.h; sourceTree = "<group>"; };
+		15FC6734237E5DA000B5DFB0 /* scanners.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanners.c; sourceTree = "<group>"; };
+		15FC6735237E5DA000B5DFB0 /* cmark-gfm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm.h"; sourceTree = "<group>"; };
+		15FC6736237E5DA000B5DFB0 /* footnotes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = footnotes.c; sourceTree = "<group>"; };
+		15FC6737237E5DA000B5DFB0 /* houdini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = houdini.h; sourceTree = "<group>"; };
+		15FC6738237E5DA000B5DFB0 /* iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iterator.h; sourceTree = "<group>"; };
+		15FC6739237E5DA000B5DFB0 /* houdini_html_u.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_html_u.c; sourceTree = "<group>"; };
+		15FC673A237E5DA000B5DFB0 /* registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = registry.c; sourceTree = "<group>"; };
+		15FC673B237E5DA000B5DFB0 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
+		15FC673C237E5DA000B5DFB0 /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = node.c; sourceTree = "<group>"; };
+		15FC673D237E5DA000B5DFB0 /* references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = references.h; sourceTree = "<group>"; };
+		15FC673E237E5DA000B5DFB0 /* render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
+		15FC6899237E684E00B5DFB0 /* Markdium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Markdium-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15FC650E237E4EF700B5DFB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15FC6507237E4EF700B5DFB0 = {
+			isa = PBXGroup;
+			children = (
+				15FC6513237E4EF700B5DFB0 /* Markdium */,
+				15FC6512237E4EF700B5DFB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15FC6512237E4EF700B5DFB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15FC6511237E4EF700B5DFB0 /* Markdium.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15FC6513237E4EF700B5DFB0 /* Markdium */ = {
+			isa = PBXGroup;
+			children = (
+				15FC65BB237E5D9F00B5DFB0 /* cmark */,
+				15FC6514237E4EF700B5DFB0 /* Markdium.h */,
+				15FC65B5237E532300B5DFB0 /* Markdium.m */,
+				15FC6899237E684E00B5DFB0 /* Markdium-Prefix.pch */,
+				15FC65AF237E526800B5DFB0 /* cmark-gfm_export.h */,
+				15FC65AD237E526800B5DFB0 /* cmark-gfm_version.h */,
+				15FC65B3237E528D00B5DFB0 /* cmark-gfm-extensions_export.h */,
+				15FC65AE237E526800B5DFB0 /* config.h */,
+				15FC6515237E4EF700B5DFB0 /* Info.plist */,
+			);
+			path = Markdium;
+			sourceTree = "<group>";
+		};
+		15FC65BB237E5D9F00B5DFB0 /* cmark */ = {
+			isa = PBXGroup;
+			children = (
+				15FC6608237E5D9F00B5DFB0 /* extensions */,
+				15FC6708237E5DA000B5DFB0 /* src */,
+			);
+			path = cmark;
+			sourceTree = SOURCE_ROOT;
+		};
+		15FC6608237E5D9F00B5DFB0 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15FC660B237E5D9F00B5DFB0 /* autolink.c */,
+				15FC6611237E5D9F00B5DFB0 /* autolink.h */,
+				15FC660A237E5D9F00B5DFB0 /* cmark-gfm-core-extensions.h */,
+				15FC6618237E5D9F00B5DFB0 /* core-extensions.c */,
+				15FC660F237E5D9F00B5DFB0 /* ext_scanners.c */,
+				15FC6617237E5D9F00B5DFB0 /* ext_scanners.h */,
+				15FC6609237E5D9F00B5DFB0 /* strikethrough.c */,
+				15FC6612237E5D9F00B5DFB0 /* strikethrough.h */,
+				15FC660C237E5D9F00B5DFB0 /* table.c */,
+				15FC6615237E5D9F00B5DFB0 /* table.h */,
+				15FC6610237E5D9F00B5DFB0 /* tagfilter.c */,
+				15FC6616237E5D9F00B5DFB0 /* tagfilter.h */,
+				15FC6614237E5D9F00B5DFB0 /* tasklist.c */,
+				15FC660E237E5D9F00B5DFB0 /* tasklist.h */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		15FC6708237E5DA000B5DFB0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				15FC6728237E5DA000B5DFB0 /* arena.c */,
+				15FC670E237E5DA000B5DFB0 /* blocks.c */,
+				15FC670D237E5DA000B5DFB0 /* buffer.c */,
+				15FC672A237E5DA000B5DFB0 /* buffer.h */,
+				15FC6718237E5DA000B5DFB0 /* chunk.h */,
+				15FC670F237E5DA000B5DFB0 /* cmark_ctype.c */,
+				15FC6729237E5DA000B5DFB0 /* cmark_ctype.h */,
+				15FC6715237E5DA000B5DFB0 /* cmark-gfm-extension_api.h */,
+				15FC6735237E5DA000B5DFB0 /* cmark-gfm.h */,
+				15FC670A237E5DA000B5DFB0 /* cmark.c */,
+				15FC672E237E5DA000B5DFB0 /* commonmark.c */,
+				15FC6736237E5DA000B5DFB0 /* footnotes.c */,
+				15FC671C237E5DA000B5DFB0 /* footnotes.h */,
+				15FC6716237E5DA000B5DFB0 /* houdini_href_e.c */,
+				15FC671E237E5DA000B5DFB0 /* houdini_html_e.c */,
+				15FC6739237E5DA000B5DFB0 /* houdini_html_u.c */,
+				15FC6737237E5DA000B5DFB0 /* houdini.h */,
+				15FC6730237E5DA000B5DFB0 /* html.c */,
+				15FC6710237E5DA000B5DFB0 /* html.h */,
+				15FC6711237E5DA000B5DFB0 /* inlines.c */,
+				15FC6732237E5DA000B5DFB0 /* inlines.h */,
+				15FC6726237E5DA000B5DFB0 /* iterator.c */,
+				15FC6738237E5DA000B5DFB0 /* iterator.h */,
+				15FC6714237E5DA000B5DFB0 /* latex.c */,
+				15FC672C237E5DA000B5DFB0 /* linked_list.c */,
+				15FC672B237E5DA000B5DFB0 /* main.c */,
+				15FC670C237E5DA000B5DFB0 /* man.c */,
+				15FC672F237E5DA000B5DFB0 /* map.c */,
+				15FC6717237E5DA000B5DFB0 /* map.h */,
+				15FC673C237E5DA000B5DFB0 /* node.c */,
+				15FC6722237E5DA000B5DFB0 /* node.h */,
+				15FC671D237E5DA000B5DFB0 /* parser.h */,
+				15FC671F237E5DA000B5DFB0 /* plaintext.c */,
+				15FC6731237E5DA000B5DFB0 /* plugin.c */,
+				15FC6713237E5DA000B5DFB0 /* plugin.h */,
+				15FC6724237E5DA000B5DFB0 /* references.c */,
+				15FC673D237E5DA000B5DFB0 /* references.h */,
+				15FC673A237E5DA000B5DFB0 /* registry.c */,
+				15FC6727237E5DA000B5DFB0 /* registry.h */,
+				15FC6725237E5DA000B5DFB0 /* render.c */,
+				15FC673E237E5DA000B5DFB0 /* render.h */,
+				15FC6734237E5DA000B5DFB0 /* scanners.c */,
+				15FC6720237E5DA000B5DFB0 /* scanners.h */,
+				15FC6719237E5DA000B5DFB0 /* syntax_extension.c */,
+				15FC672D237E5DA000B5DFB0 /* syntax_extension.h */,
+				15FC6723237E5DA000B5DFB0 /* utf8.c */,
+				15FC673B237E5DA000B5DFB0 /* utf8.h */,
+				15FC6709237E5DA000B5DFB0 /* xml.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15FC650C237E4EF700B5DFB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FC6868237E5DA000B5DFB0 /* html.h in Headers */,
+				15FC6788237E5DA000B5DFB0 /* tasklist.h in Headers */,
+				15FC6890237E5DA000B5DFB0 /* iterator.h in Headers */,
+				15FC6874237E5DA000B5DFB0 /* footnotes.h in Headers */,
+				15FC688F237E5DA000B5DFB0 /* houdini.h in Headers */,
+				15FC6791237E5DA000B5DFB0 /* ext_scanners.h in Headers */,
+				15FC686D237E5DA000B5DFB0 /* cmark-gfm-extension_api.h in Headers */,
+				15FC6893237E5DA000B5DFB0 /* utf8.h in Headers */,
+				15FC6870237E5DA000B5DFB0 /* chunk.h in Headers */,
+				15FC687A237E5DA000B5DFB0 /* node.h in Headers */,
+				15FC678C237E5DA000B5DFB0 /* strikethrough.h in Headers */,
+				15FC6882237E5DA000B5DFB0 /* buffer.h in Headers */,
+				15FC686B237E5DA000B5DFB0 /* plugin.h in Headers */,
+				15FC65B2237E526800B5DFB0 /* cmark-gfm_export.h in Headers */,
+				15FC6790237E5DA000B5DFB0 /* tagfilter.h in Headers */,
+				15FC6885237E5DA000B5DFB0 /* syntax_extension.h in Headers */,
+				15FC6896237E5DA000B5DFB0 /* render.h in Headers */,
+				15FC686F237E5DA000B5DFB0 /* map.h in Headers */,
+				15FC689A237E684E00B5DFB0 /* Markdium-Prefix.pch in Headers */,
+				15FC688A237E5DA000B5DFB0 /* inlines.h in Headers */,
+				15FC6784237E5DA000B5DFB0 /* cmark-gfm-core-extensions.h in Headers */,
+				15FC6516237E4EF700B5DFB0 /* Markdium.h in Headers */,
+				15FC678F237E5DA000B5DFB0 /* table.h in Headers */,
+				15FC688D237E5DA000B5DFB0 /* cmark-gfm.h in Headers */,
+				15FC65B4237E528D00B5DFB0 /* cmark-gfm-extensions_export.h in Headers */,
+				15FC65B0237E526800B5DFB0 /* cmark-gfm_version.h in Headers */,
+				15FC6895237E5DA000B5DFB0 /* references.h in Headers */,
+				15FC6878237E5DA000B5DFB0 /* scanners.h in Headers */,
+				15FC65B1237E526800B5DFB0 /* config.h in Headers */,
+				15FC678B237E5DA000B5DFB0 /* autolink.h in Headers */,
+				15FC687F237E5DA000B5DFB0 /* registry.h in Headers */,
+				15FC6875237E5DA000B5DFB0 /* parser.h in Headers */,
+				15FC6881237E5DA000B5DFB0 /* cmark_ctype.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		15FC6510237E4EF700B5DFB0 /* Markdium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15FC6519237E4EF700B5DFB0 /* Build configuration list for PBXNativeTarget "Markdium" */;
+			buildPhases = (
+				15FC650C237E4EF700B5DFB0 /* Headers */,
+				15FC650D237E4EF700B5DFB0 /* Sources */,
+				15FC650E237E4EF700B5DFB0 /* Frameworks */,
+				15FC650F237E4EF700B5DFB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Markdium;
+			productName = Markdium;
+			productReference = 15FC6511237E4EF700B5DFB0 /* Markdium.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15FC6508237E4EF700B5DFB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = lvv;
+				TargetAttributes = {
+					15FC6510237E4EF700B5DFB0 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 15FC650B237E4EF700B5DFB0 /* Build configuration list for PBXProject "Markdium" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15FC6507237E4EF700B5DFB0;
+			productRefGroup = 15FC6512237E4EF700B5DFB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15FC6510237E4EF700B5DFB0 /* Markdium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15FC650F237E4EF700B5DFB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15FC650D237E4EF700B5DFB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FC6888237E5DA000B5DFB0 /* html.c in Sources */,
+				15FC6789237E5DA000B5DFB0 /* ext_scanners.c in Sources */,
+				15FC6786237E5DA000B5DFB0 /* table.c in Sources */,
+				15FC6884237E5DA000B5DFB0 /* linked_list.c in Sources */,
+				15FC687E237E5DA000B5DFB0 /* iterator.c in Sources */,
+				15FC6883237E5DA000B5DFB0 /* main.c in Sources */,
+				15FC6862237E5DA000B5DFB0 /* cmark.c in Sources */,
+				15FC6869237E5DA000B5DFB0 /* inlines.c in Sources */,
+				15FC686C237E5DA000B5DFB0 /* latex.c in Sources */,
+				15FC6889237E5DA000B5DFB0 /* plugin.c in Sources */,
+				15FC6877237E5DA000B5DFB0 /* plaintext.c in Sources */,
+				15FC6871237E5DA000B5DFB0 /* syntax_extension.c in Sources */,
+				15FC6880237E5DA000B5DFB0 /* arena.c in Sources */,
+				15FC6865237E5DA000B5DFB0 /* buffer.c in Sources */,
+				15FC6867237E5DA000B5DFB0 /* cmark_ctype.c in Sources */,
+				15FC686E237E5DA000B5DFB0 /* houdini_href_e.c in Sources */,
+				15FC6785237E5DA000B5DFB0 /* autolink.c in Sources */,
+				15FC6861237E5DA000B5DFB0 /* xml.c in Sources */,
+				15FC6892237E5DA000B5DFB0 /* registry.c in Sources */,
+				15FC6792237E5DA000B5DFB0 /* core-extensions.c in Sources */,
+				15FC678E237E5DA000B5DFB0 /* tasklist.c in Sources */,
+				15FC6886237E5DA000B5DFB0 /* commonmark.c in Sources */,
+				15FC6887237E5DA000B5DFB0 /* map.c in Sources */,
+				15FC6866237E5DA000B5DFB0 /* blocks.c in Sources */,
+				15FC687D237E5DA000B5DFB0 /* render.c in Sources */,
+				15FC687B237E5DA000B5DFB0 /* utf8.c in Sources */,
+				15FC65B6237E532300B5DFB0 /* Markdium.m in Sources */,
+				15FC6876237E5DA000B5DFB0 /* houdini_html_e.c in Sources */,
+				15FC6864237E5DA000B5DFB0 /* man.c in Sources */,
+				15FC688C237E5DA000B5DFB0 /* scanners.c in Sources */,
+				15FC678A237E5DA000B5DFB0 /* tagfilter.c in Sources */,
+				15FC687C237E5DA000B5DFB0 /* references.c in Sources */,
+				15FC6894237E5DA000B5DFB0 /* node.c in Sources */,
+				15FC688E237E5DA000B5DFB0 /* footnotes.c in Sources */,
+				15FC6891237E5DA000B5DFB0 /* houdini_html_u.c in Sources */,
+				15FC6783237E5DA000B5DFB0 /* strikethrough.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15FC6517237E4EF700B5DFB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15FC6518237E4EF700B5DFB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		15FC651A237E4EF700B5DFB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=appletvos*]" = arm64;
+				"ARCHS[sdk=appletvsimulator*]" = "$(ARCHS_STANDARD)";
+				"ARCHS[sdk=iphoneos*]" = (
+					arm64,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Markdium/Markdium-Prefix.pch";
+				INFOPLIST_FILE = Markdium/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cmark/build/extensions",
+					"$(PROJECT_DIR)/cmark/build/src",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.Markdium;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				"VALID_ARCHS[sdk=appletvos*]" = arm64;
+				"VALID_ARCHS[sdk=appletvsimulator*]" = "i386 x86_64";
+				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
+				"VALID_ARCHS[sdk=macosx*]" = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		15FC651B237E4EF700B5DFB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=appletvos*]" = arm64;
+				"ARCHS[sdk=iphoneos*]" = (
+					arm64,
+					armv7,
+				);
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Markdium/Markdium-Prefix.pch";
+				INFOPLIST_FILE = Markdium/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cmark/build/extensions",
+					"$(PROJECT_DIR)/cmark/build/src",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.Markdium;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				"VALID_ARCHS[sdk=appletvos*]" = arm64;
+				"VALID_ARCHS[sdk=appletvsimulator*]" = "i386 x86_64";
+				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
+				"VALID_ARCHS[sdk=macosx*]" = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15FC650B237E4EF700B5DFB0 /* Build configuration list for PBXProject "Markdium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FC6517237E4EF700B5DFB0 /* Debug */,
+				15FC6518237E4EF700B5DFB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15FC6519237E4EF700B5DFB0 /* Build configuration list for PBXNativeTarget "Markdium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FC651A237E4EF700B5DFB0 /* Debug */,
+				15FC651B237E4EF700B5DFB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15FC6508237E4EF700B5DFB0 /* Project object */;
+}
