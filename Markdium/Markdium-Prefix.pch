@@ -12,7 +12,4 @@
 #include "cmark-gfm.h"
 #include "cmark-gfm-core-extensions.h"
 
-#include "node.h"
-#include "parser.h"
-
 #endif /* Markdium_Prefix_pch */

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15478C63237F890A0097C349 /* CMarkParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 15478C61237F890A0097C349 /* CMarkParser.h */; };
+		15478C64237F890A0097C349 /* CMarkParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 15478C62237F890A0097C349 /* CMarkParser.m */; };
+		15478C66237F8A990097C349 /* MarkdiumTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 15478C65237F8A990097C349 /* MarkdiumTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15478C68237F8AE40097C349 /* MarkdiumTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 15478C67237F8AE40097C349 /* MarkdiumTypes.m */; };
 		15640120237E9C6100F8CD81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1564011F237E9C6100F8CD81 /* main.m */; };
 		15640127237E9C8100F8CD81 /* Markdium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FC6511237E4EF700B5DFB0 /* Markdium.framework */; };
 		15FC6516237E4EF700B5DFB0 /* Markdium.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FC6514237E4EF700B5DFB0 /* Markdium.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,6 +106,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15478C61237F890A0097C349 /* CMarkParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMarkParser.h; sourceTree = "<group>"; };
+		15478C62237F890A0097C349 /* CMarkParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMarkParser.m; sourceTree = "<group>"; };
+		15478C65237F8A990097C349 /* MarkdiumTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdiumTypes.h; sourceTree = "<group>"; };
+		15478C67237F8AE40097C349 /* MarkdiumTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkdiumTypes.m; sourceTree = "<group>"; };
 		1564011D237E9C6100F8CD81 /* cmark-gfm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cmark-gfm"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1564011F237E9C6100F8CD81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15FC6511237E4EF700B5DFB0 /* Markdium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Markdium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,8 +241,12 @@
 			isa = PBXGroup;
 			children = (
 				15FC65BB237E5D9F00B5DFB0 /* cmark */,
+				15478C65237F8A990097C349 /* MarkdiumTypes.h */,
+				15478C67237F8AE40097C349 /* MarkdiumTypes.m */,
 				15FC6514237E4EF700B5DFB0 /* Markdium.h */,
 				15FC65B5237E532300B5DFB0 /* Markdium.m */,
+				15478C61237F890A0097C349 /* CMarkParser.h */,
+				15478C62237F890A0097C349 /* CMarkParser.m */,
 				15FC6899237E684E00B5DFB0 /* Markdium-Prefix.pch */,
 				15FC65AF237E526800B5DFB0 /* cmark-gfm_export.h */,
 				15FC65AD237E526800B5DFB0 /* cmark-gfm_version.h */,
@@ -337,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FC6868237E5DA000B5DFB0 /* html.h in Headers */,
+				15478C66237F8A990097C349 /* MarkdiumTypes.h in Headers */,
 				15FC6788237E5DA000B5DFB0 /* tasklist.h in Headers */,
 				15FC6890237E5DA000B5DFB0 /* iterator.h in Headers */,
 				15FC6874237E5DA000B5DFB0 /* footnotes.h in Headers */,
@@ -356,6 +369,7 @@
 				15FC686F237E5DA000B5DFB0 /* map.h in Headers */,
 				15FC689A237E684E00B5DFB0 /* Markdium-Prefix.pch in Headers */,
 				15FC688A237E5DA000B5DFB0 /* inlines.h in Headers */,
+				15478C63237F890A0097C349 /* CMarkParser.h in Headers */,
 				15FC6784237E5DA000B5DFB0 /* cmark-gfm-core-extensions.h in Headers */,
 				15FC6516237E4EF700B5DFB0 /* Markdium.h in Headers */,
 				15FC678F237E5DA000B5DFB0 /* table.h in Headers */,
@@ -473,7 +487,9 @@
 			files = (
 				15FC6888237E5DA000B5DFB0 /* html.c in Sources */,
 				15FC6789237E5DA000B5DFB0 /* ext_scanners.c in Sources */,
+				15478C68237F8AE40097C349 /* MarkdiumTypes.m in Sources */,
 				15FC6786237E5DA000B5DFB0 /* table.c in Sources */,
+				15478C64237F890A0097C349 /* CMarkParser.m in Sources */,
 				15FC6884237E5DA000B5DFB0 /* linked_list.c in Sources */,
 				15FC687E237E5DA000B5DFB0 /* iterator.c in Sources */,
 				15FC6862237E5DA000B5DFB0 /* cmark.c in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MarkdiumTypes.h"
 
 @interface Markdium : NSObject
 
