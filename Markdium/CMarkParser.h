@@ -14,6 +14,4 @@ NSString *getNodeTypeString(cmark_node *node);
 
 NSString *getNodeLiteral(cmark_node *node);
 
-void cmarkEnableGFM(cmark_parser *parser);
-
-cmark_node *cmarkParseString(NSString *string, int options, BOOL gfm);
+cmark_node *cmarkParseString(NSString *string, int options, int extensions);

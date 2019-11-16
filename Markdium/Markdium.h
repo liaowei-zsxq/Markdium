@@ -13,7 +13,14 @@
 
 @property(nonatomic, assign) NSUInteger width;  // Specify wrap width (default 0 = nowrap)
 
-- (nullable instancetype)initWithString:(nonnull NSString *)string enableGFM:(BOOL)gfm;
++ (nullable instancetype)new NS_UNAVAILABLE;
+- (nullable instancetype)init NS_UNAVAILABLE;
+
+- (nullable instancetype)initWithString:(nonnull NSString *)string;
+
+- (nullable instancetype)initWithString:(nonnull NSString *)string options:(MDOptions)options;
+
+- (nullable instancetype)initWithString:(nonnull NSString *)string options:(MDOptions)options extensions:(MDExtensions)extensions;
 
 @end
 

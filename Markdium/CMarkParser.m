@@ -7,6 +7,7 @@
 //
 
 #import "CMarkParser.h"
+#import "MarkdiumTypes.h"
 
 void cmarkGFMCoreExtensionsEnsureRegistered(void) {
     static dispatch_once_t onceToken;
@@ -41,15 +42,15 @@ extern cmark_syntax_extension *create_strikethrough_extension(void);
 extern cmark_syntax_extension *create_tasklist_extension(void);
 extern cmark_syntax_extension *create_table_extension(void);
 
-void cmarkEnableGFM(cmark_parser *parser) {
-    cmark_parser_attach_syntax_extension(parser, create_tagfilter_extension());
-    cmark_parser_attach_syntax_extension(parser, create_autolink_extension());
-    cmark_parser_attach_syntax_extension(parser, create_strikethrough_extension());
-    cmark_parser_attach_syntax_extension(parser, create_tasklist_extension());
-    cmark_parser_attach_syntax_extension(parser, create_table_extension());
+void cmarkEnableGFM(cmark_parser *parser, int extensions) {
+    if (extensions & MDExtensionTagFilter) cmark_parser_attach_syntax_extension(parser, create_tagfilter_extension());
+    if (extensions & MDExtensionAutolink) cmark_parser_attach_syntax_extension(parser, create_autolink_extension());
+    if (extensions & MDExtensionStrikethrough) cmark_parser_attach_syntax_extension(parser, create_strikethrough_extension());
+    if (extensions & MDExtensionTasklist) cmark_parser_attach_syntax_extension(parser, create_tasklist_extension());
+    if (extensions & MDExtensionTable) cmark_parser_attach_syntax_extension(parser, create_table_extension());
 }
 
-cmark_node *cmarkParseString(NSString *string, int options, BOOL gfm) {
+cmark_node *cmarkParseString(NSString *string, int options, int extensions) {
     if (!string) {
         return NULL;
     }
@@ -61,9 +62,7 @@ cmark_node *cmarkParseString(NSString *string, int options, BOOL gfm) {
         return NULL;
     }
 
-    if (gfm) {
-        cmarkEnableGFM(parser);
-    }
+    cmarkEnableGFM(parser, extensions);
 
     const char *utf8String = string.UTF8String;
     cmark_parser_feed(parser, utf8String, strlen(utf8String));

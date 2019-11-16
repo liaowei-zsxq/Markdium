@@ -24,9 +24,20 @@
     }
 }
 
-- (instancetype)initWithString:(NSString *)string enableGFM:(BOOL)gfm {
-    int options = CMARK_OPT_SAFE | CMARK_OPT_HARDBREAKS | CMARK_OPT_SMART;
-    cmark_node *node = cmarkParseString(string, options, gfm);
+- (instancetype)initWithString:(NSString *)string {
+    return [self initWithString:string options:MDOptionDefault];
+}
+
+- (instancetype)initWithString:(NSString *)string options:(MDOptions)options {
+    return [self initWithString:string options:options extensions:MDExtensionNone];
+}
+
+- (instancetype)initWithString:(NSString *)string options:(MDOptions)options extensions:(MDExtensions)extensions {
+    if (!string) {
+        return nil;
+    }
+    
+    cmark_node *node = cmarkParseString(string, (int)options, (int)extensions);
     if (!node) {
         return nil;
     }
