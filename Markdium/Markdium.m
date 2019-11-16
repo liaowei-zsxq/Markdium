@@ -50,6 +50,32 @@
     return self;
 }
 
+- (instancetype)initWithPath:(NSString *)path {
+    return [self initWithPath:path options:MDOptionDefault];
+}
+
+- (instancetype)initWithPath:(NSString *)path options:(MDOptions)options {
+    return [self initWithPath:path options:options extensions:MDExtensionNone];
+}
+
+- (instancetype)initWithPath:(NSString *)path options:(MDOptions)options extensions:(MDExtensions)extensions {
+    if (!path) {
+        return nil;
+    }
+
+    cmark_node *node = cmarkParsePath(path, (int)options, (int)extensions);
+    if (!node) {
+        return nil;
+    }
+
+    if (self = [super init]) {
+        _options = options;
+        _rootNode = node;
+    }
+
+    return self;
+}
+
 @end
 
 @implementation Markdium (render)

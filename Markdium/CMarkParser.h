@@ -15,3 +15,5 @@ NSString *getNodeTypeString(cmark_node *node);
 NSString *getNodeLiteral(cmark_node *node);
 
 cmark_node *cmarkParseString(NSString *string, int options, int extensions);
+
+cmark_node *cmarkParsePath(NSString *path, int options, int extensions);

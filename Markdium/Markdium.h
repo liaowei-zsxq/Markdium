@@ -17,10 +17,12 @@
 - (nullable instancetype)init NS_UNAVAILABLE;
 
 - (nullable instancetype)initWithString:(nonnull NSString *)string;
-
 - (nullable instancetype)initWithString:(nonnull NSString *)string options:(MDOptions)options;
-
 - (nullable instancetype)initWithString:(nonnull NSString *)string options:(MDOptions)options extensions:(MDExtensions)extensions;
+
+- (nullable instancetype)initWithPath:(nonnull NSString *)path;
+- (nullable instancetype)initWithPath:(nonnull NSString *)path options:(MDOptions)options;
+- (nullable instancetype)initWithPath:(nonnull NSString *)path options:(MDOptions)options extensions:(MDExtensions)extensions;
 
 @end
 

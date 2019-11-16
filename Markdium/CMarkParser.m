@@ -71,3 +71,40 @@ cmark_node *cmarkParseString(NSString *string, int options, int extensions) {
 
     return node;
 }
+
+cmark_node *cmarkParsePath(NSString *path, int options, int extensions) {
+    if (!path || ![NSFileManager.defaultManager fileExistsAtPath:path]) {
+        return NULL;
+    }
+
+    cmarkGFMCoreExtensionsEnsureRegistered();
+
+    cmark_parser *parser = cmark_parser_new(options);
+    if (!parser) {
+        return NULL;
+    }
+
+    cmarkEnableGFM(parser, extensions);
+
+    uint64 fileSize = [(NSNumber *)([NSFileManager.defaultManager attributesOfItemAtPath:path error:NULL][NSFileSize]) unsignedLongLongValue];
+    NSInputStream *fd = [NSInputStream inputStreamWithFileAtPath:path];
+    [fd open];
+    uint8_t *buffer = (uint8_t *)malloc(MIN(fileSize, 1024));
+    
+    while (fd.hasBytesAvailable) {
+        NSInteger len = [fd read:buffer maxLength:1024];
+        if (len > 0) {
+            cmark_parser_feed(parser, (const char *)buffer, len);
+        } else {
+            break;
+        }
+    }
+
+    free(buffer);
+    [fd close];
+
+    cmark_node *node = cmark_parser_finish(parser);
+    cmark_parser_free(parser);
+
+    return node;
+}
