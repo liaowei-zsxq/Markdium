@@ -8,6 +8,7 @@
 
 #import "CMarkParser.h"
 #import "MarkdiumTypes.h"
+#import "MDNode_internal.h"
 
 void cmarkGFMCoreExtensionsEnsureRegistered(void) {
     static dispatch_once_t onceToken;
@@ -112,4 +113,25 @@ cmark_node *cmarkParsePath(NSString *path, int options, int extensions) {
     cmark_parser_free(parser);
 
     return node;
+}
+
+void cmarkParseAsATS(cmark_node *node, NSMutableArray<MDNode *> *list, int lvl) {
+    while (node) {
+        MDNode *last = list.lastObject;
+        MDNode *cur = [MDNode nodeWithCMarkNode:node];
+        cur.lvl = lvl;
+        [list addObject:cur];
+
+        if (lvl > last.lvl) {
+            [last addChild:cur];
+        } else {
+            [last.parent addChild:cur];
+            last.next = cur;
+        }
+
+        cmark_node *child = cmark_node_first_child(node);
+        cmarkParseAsATS(child, list, ++lvl);
+
+        node = cmark_node_next(node);
+    }
 }

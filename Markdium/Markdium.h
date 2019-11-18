@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MarkdiumTypes.h"
+#import "MDNode.h"
 
 @interface Markdium : NSObject
 
@@ -23,6 +24,12 @@
 - (nullable instancetype)initWithPath:(nonnull NSString *)path;
 - (nullable instancetype)initWithPath:(nonnull NSString *)path options:(MDOptions)options;
 - (nullable instancetype)initWithPath:(nonnull NSString *)path options:(MDOptions)options extensions:(MDExtensions)extensions;
+
+@end
+
+@interface Markdium (parse)
+
+- (nonnull MDNode *)parseAsAST;
 
 @end
 

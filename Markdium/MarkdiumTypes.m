@@ -32,25 +32,34 @@ const MDExtensions MDExtensionTable = (1 << 5);
 const MDExtensions MDExtensionAll = MDExtensionTagFilter | MDExtensionAutolink | MDExtensionStrikethrough |
                                     MDExtensionTasklist | MDExtensionTable;
 
-const MDNodeType MDNodeTypeDocument = NODE_DOCUMENT;
-const MDNodeType MDNodeTypeBlockQuote = NODE_BLOCK_QUOTE;
-const MDNodeType MDNodeTypeList = NODE_LIST;
-const MDNodeType MDNodeTypeItem = NODE_ITEM;
-const MDNodeType MDNodeTypeCodeBlock = NODE_CODE_BLOCK;
-const MDNodeType MDNodeTypeHTMLBlock = NODE_HTML_BLOCK;
-const MDNodeType MDNodeTypeCustomBlock = NODE_CUSTOM_BLOCK;
-const MDNodeType MDNodeTypeParagraph = NODE_PARAGRAPH;
-const MDNodeType MDNodeTypeHeading = NODE_HEADING;
-const MDNodeType MDNodeTypeHeader = NODE_HEADER;
-const MDNodeType MDNodeTypeThematicBreak = NODE_THEMATIC_BREAK;
-const MDNodeType MDNodeTypeHRule = NODE_HRULE;
-const MDNodeType MDNodeTypeText = NODE_TEXT;
-const MDNodeType MDNodeTypeSoftBreak = NODE_SOFTBREAK;
-const MDNodeType MDNodeTypeLineBreak = NODE_LINEBREAK;
-const MDNodeType MDNodeTypeCode = NODE_CODE;
-const MDNodeType MDNodeTypeHTMLInline = NODE_HTML_INLINE;
-const MDNodeType MDNodeTypeCustomInline = NODE_CUSTOM_INLINE;
-const MDNodeType MDNodeTypeEmph = NODE_EMPH;
-const MDNodeType MDNodeTypeStrong = NODE_STRONG;
-const MDNodeType MDNodeTypeLink = NODE_LINK;
-const MDNodeType MDNodeTypeImage = NODE_IMAGE;
+/* Block */
+const MDNodeType MDNodeTypeDocument = CMARK_NODE_DOCUMENT;
+const MDNodeType MDNodeTypeBlockQuote = CMARK_NODE_BLOCK_QUOTE;
+const MDNodeType MDNodeTypeList = CMARK_NODE_LIST;
+const MDNodeType MDNodeTypeItem = CMARK_NODE_ITEM;
+const MDNodeType MDNodeTypeCodeBlock = CMARK_NODE_CODE_BLOCK;
+const MDNodeType MDNodeTypeHTMLBlock = CMARK_NODE_HTML_BLOCK;
+const MDNodeType MDNodeTypeCustomBlock = CMARK_NODE_CUSTOM_BLOCK;
+const MDNodeType MDNodeTypeParagraph = CMARK_NODE_PARAGRAPH;
+const MDNodeType MDNodeTypeHeading = CMARK_NODE_HEADING;
+const MDNodeType MDNodeTypeThematicBreak = CMARK_NODE_THEMATIC_BREAK;
+const MDNodeType MDNodeTypeFootnoteDefinition = CMARK_NODE_FOOTNOTE_DEFINITION;
+
+/* Inline */
+const MDNodeType MDNodeTypeText = CMARK_NODE_TEXT;
+const MDNodeType MDNodeTypeSoftBreak = CMARK_NODE_SOFTBREAK;
+const MDNodeType MDNodeTypeLineBreak = CMARK_NODE_LINEBREAK;
+const MDNodeType MDNodeTypeCode = CMARK_NODE_CODE;
+const MDNodeType MDNodeTypeHTMLInline = CMARK_NODE_HTML_INLINE;
+const MDNodeType MDNodeTypeCustomInline = CMARK_NODE_CUSTOM_INLINE;
+const MDNodeType MDNodeTypeEmph = CMARK_NODE_EMPH;
+const MDNodeType MDNodeTypeStrong = CMARK_NODE_STRONG;
+const MDNodeType MDNodeTypeLink = CMARK_NODE_LINK;
+const MDNodeType MDNodeTypeImage = CMARK_NODE_IMAGE;
+const MDNodeType MDNodeTypeFootnoteReference = CMARK_NODE_FOOTNOTE_REFERENCE;
+
+const MDNodeListType MDNodeBulletList = CMARK_BULLET_LIST;
+const MDNodeListType MDNodeOrderedList = CMARK_ORDERED_LIST;
+
+const MDNodeListDelim MDNodeListParenDelim = CMARK_PAREN_DELIM;
+const MDNodeListDelim MDNodeListPeriodDelim = CMARK_PERIOD_DELIM;

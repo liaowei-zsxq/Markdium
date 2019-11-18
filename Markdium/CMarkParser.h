@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MDNode.h"
 
 void cmarkGFMCoreExtensionsEnsureRegistered(void);
 
@@ -17,3 +18,5 @@ NSString *getNodeLiteral(cmark_node *node);
 cmark_node *cmarkParseString(NSString *string, int options, int extensions);
 
 cmark_node *cmarkParsePath(NSString *path, int options, int extensions);
+
+void cmarkParseAsATS(cmark_node *node, NSMutableArray<MDNode *> *list, int lvl);

@@ -8,19 +8,20 @@
 
 #import "Markdium.h"
 #import "CMarkParser.h"
+#import "MDNode_internal.h"
 
 @interface Markdium ()
 
 @property(nonatomic, assign) NSInteger options;
-@property(nonatomic, unsafe_unretained) cmark_node *rootNode;
+@property(nonatomic, unsafe_unretained) cmark_node *document;
 
 @end
 
 @implementation Markdium
 
 - (void)dealloc {
-    if (_rootNode) {
-        cmark_node_free(_rootNode);
+    if (_document) {
+        cmark_node_free(_document);
     }
 }
 
@@ -44,7 +45,7 @@
 
     if (self = [super init]) {
         _options = options;
-        _rootNode = node;
+        _document = node;
     }
 
     return self;
@@ -70,10 +71,21 @@
 
     if (self = [super init]) {
         _options = options;
-        _rootNode = node;
+        _document = node;
     }
 
     return self;
+}
+
+@end
+
+@implementation Markdium (parse)
+
+- (nonnull NSArray<MDNode *> *)parseAsAST {
+    NSMutableArray<MDNode *> *list = NSMutableArray.array;
+    cmarkParseAsATS(_document, list, 0);
+
+    return list;
 }
 
 @end
@@ -82,7 +94,7 @@
 
 - (NSString *)renderAsHTML {
     NSString *output = nil;
-    char *html = cmark_render_html(self.rootNode, (int)self.options, NULL);
+    char *html = cmark_render_html(self.document, (int)self.options, NULL);
     if (html) {
         output = [NSString stringWithUTF8String:html];
         free(html);
@@ -93,7 +105,7 @@
 
 - (NSString *)renderAsXML {
     NSString *output = nil;
-    char *xml = cmark_render_xml(self.rootNode, (int)self.options);
+    char *xml = cmark_render_xml(self.document, (int)self.options);
     if (xml) {
         output = [NSString stringWithUTF8String:xml];
         free(xml);
@@ -104,7 +116,7 @@
 
 - (NSString *)renderAsMAN {
     NSString *output = nil;
-    char *man = cmark_render_man(self.rootNode, (int)self.options, (int)self.width);
+    char *man = cmark_render_man(self.document, (int)self.options, (int)self.width);
     if (man) {
         output = [NSString stringWithUTF8String:man];
         free(man);
@@ -115,7 +127,7 @@
 
 - (NSString *)renderAsLatex {
     NSString *output = nil;
-    char *latex = cmark_render_latex(self.rootNode, (int)self.options, (int)self.width);
+    char *latex = cmark_render_latex(self.document, (int)self.options, (int)self.width);
     if (latex) {
         output = [NSString stringWithUTF8String:latex];
         free(latex);
@@ -126,7 +138,7 @@
 
 - (NSString *)renderAsCommonMark {
     NSString *output = nil;
-    char *md = cmark_render_commonmark(self.rootNode, (int)self.options, (int)self.width);
+    char *md = cmark_render_commonmark(self.document, (int)self.options, (int)self.width);
     if (md) {
         output = [NSString stringWithUTF8String:md];
         free(md);
@@ -137,7 +149,7 @@
 
 - (NSString *)renderAsPlaintext {
     NSString *output = nil;
-    char *txt = cmark_render_plaintext(self.rootNode, (int)self.options, (int)self.width);
+    char *txt = cmark_render_plaintext(self.document, (int)self.options, (int)self.width);
     if (txt) {
         output = [NSString stringWithUTF8String:txt];
         free(txt);

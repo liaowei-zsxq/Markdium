@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153035E3237FD19100DB9E6E /* MDNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 153035E1237FD19100DB9E6E /* MDNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		153035E4237FD19100DB9E6E /* MDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 153035E2237FD19100DB9E6E /* MDNode.m */; };
+		153035E6237FD45200DB9E6E /* MDNode_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 153035E5237FD45200DB9E6E /* MDNode_internal.h */; };
 		15478C63237F890A0097C349 /* CMarkParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 15478C61237F890A0097C349 /* CMarkParser.h */; };
 		15478C64237F890A0097C349 /* CMarkParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 15478C62237F890A0097C349 /* CMarkParser.m */; };
 		15478C66237F8A990097C349 /* MarkdiumTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 15478C65237F8A990097C349 /* MarkdiumTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +109,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		153035E1237FD19100DB9E6E /* MDNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDNode.h; sourceTree = "<group>"; };
+		153035E2237FD19100DB9E6E /* MDNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDNode.m; sourceTree = "<group>"; };
+		153035E5237FD45200DB9E6E /* MDNode_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDNode_internal.h; sourceTree = "<group>"; };
 		15478C61237F890A0097C349 /* CMarkParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMarkParser.h; sourceTree = "<group>"; };
 		15478C62237F890A0097C349 /* CMarkParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMarkParser.m; sourceTree = "<group>"; };
 		15478C65237F8A990097C349 /* MarkdiumTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdiumTypes.h; sourceTree = "<group>"; };
@@ -245,6 +251,9 @@
 				15478C67237F8AE40097C349 /* MarkdiumTypes.m */,
 				15FC6514237E4EF700B5DFB0 /* Markdium.h */,
 				15FC65B5237E532300B5DFB0 /* Markdium.m */,
+				153035E1237FD19100DB9E6E /* MDNode.h */,
+				153035E5237FD45200DB9E6E /* MDNode_internal.h */,
+				153035E2237FD19100DB9E6E /* MDNode.m */,
 				15478C61237F890A0097C349 /* CMarkParser.h */,
 				15478C62237F890A0097C349 /* CMarkParser.m */,
 				15FC6899237E684E00B5DFB0 /* Markdium-Prefix.pch */,
@@ -348,8 +357,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15FC6868237E5DA000B5DFB0 /* html.h in Headers */,
 				15478C66237F8A990097C349 /* MarkdiumTypes.h in Headers */,
+				15FC6868237E5DA000B5DFB0 /* html.h in Headers */,
+				153035E3237FD19100DB9E6E /* MDNode.h in Headers */,
 				15FC6788237E5DA000B5DFB0 /* tasklist.h in Headers */,
 				15FC6890237E5DA000B5DFB0 /* iterator.h in Headers */,
 				15FC6874237E5DA000B5DFB0 /* footnotes.h in Headers */,
@@ -376,6 +386,7 @@
 				15FC688D237E5DA000B5DFB0 /* cmark-gfm.h in Headers */,
 				15FC65B4237E528D00B5DFB0 /* cmark-gfm-extensions_export.h in Headers */,
 				15FC65B0237E526800B5DFB0 /* cmark-gfm_version.h in Headers */,
+				153035E6237FD45200DB9E6E /* MDNode_internal.h in Headers */,
 				15FC6895237E5DA000B5DFB0 /* references.h in Headers */,
 				15FC6878237E5DA000B5DFB0 /* scanners.h in Headers */,
 				15FC65B1237E526800B5DFB0 /* config.h in Headers */,
@@ -503,6 +514,7 @@
 				15FC6867237E5DA000B5DFB0 /* cmark_ctype.c in Sources */,
 				15FC686E237E5DA000B5DFB0 /* houdini_href_e.c in Sources */,
 				15FC6785237E5DA000B5DFB0 /* autolink.c in Sources */,
+				153035E4237FD19100DB9E6E /* MDNode.m in Sources */,
 				15FC6861237E5DA000B5DFB0 /* xml.c in Sources */,
 				15FC6892237E5DA000B5DFB0 /* registry.c in Sources */,
 				15FC6792237E5DA000B5DFB0 /* core-extensions.c in Sources */,

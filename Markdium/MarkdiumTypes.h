@@ -103,6 +103,7 @@ extern const MDExtensions MDExtensionAll;
 
 typedef NSInteger MDNodeType;
 
+/* Block */
 extern const MDNodeType MDNodeTypeDocument;
 extern const MDNodeType MDNodeTypeBlockQuote;
 extern const MDNodeType MDNodeTypeList;
@@ -112,9 +113,10 @@ extern const MDNodeType MDNodeTypeHTMLBlock;
 extern const MDNodeType MDNodeTypeCustomBlock;
 extern const MDNodeType MDNodeTypeParagraph;
 extern const MDNodeType MDNodeTypeHeading;
-extern const MDNodeType MDNodeTypeHeader;
 extern const MDNodeType MDNodeTypeThematicBreak;
-extern const MDNodeType MDNodeTypeHRule;
+extern const MDNodeType MDNodeTypeFootnoteDefinition;
+
+/* Inline */
 extern const MDNodeType MDNodeTypeText;
 extern const MDNodeType MDNodeTypeSoftBreak;
 extern const MDNodeType MDNodeTypeLineBreak;
@@ -125,5 +127,16 @@ extern const MDNodeType MDNodeTypeEmph;
 extern const MDNodeType MDNodeTypeStrong;
 extern const MDNodeType MDNodeTypeLink;
 extern const MDNodeType MDNodeTypeImage;
+extern const MDNodeType MDNodeTypeFootnoteReference;
+
+typedef NSInteger MDNodeListType;
+
+extern const MDNodeListType MDNodeBulletList;
+extern const MDNodeListType MDNodeOrderedList;
+
+typedef NSInteger MDNodeListDelim;
+
+extern const MDNodeListDelim MDNodeListDelimParen;
+extern const MDNodeListDelim MDNodeListDelimPeriod;
 
 #endif /* MarkdiumTypes_h */
