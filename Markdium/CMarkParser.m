@@ -77,6 +77,12 @@ cmark_node *cmarkParsePath(NSString *path, int options, int extensions) {
         return NULL;
     }
 
+    NSDictionary *fileAttrs = [NSFileManager.defaultManager attributesOfItemAtPath:path error:NULL];
+    NSNumber *fileSize = fileAttrs[NSFileSize];
+    if (fileSize.unsignedLongLongValue == 0) {
+        return NULL;
+    }
+
     cmarkGFMCoreExtensionsEnsureRegistered();
 
     cmark_parser *parser = cmark_parser_new(options);
@@ -86,10 +92,9 @@ cmark_node *cmarkParsePath(NSString *path, int options, int extensions) {
 
     cmarkEnableGFM(parser, extensions);
 
-    uint64 fileSize = [(NSNumber *)([NSFileManager.defaultManager attributesOfItemAtPath:path error:NULL][NSFileSize]) unsignedLongLongValue];
     NSInputStream *fd = [NSInputStream inputStreamWithFileAtPath:path];
     [fd open];
-    uint8_t *buffer = (uint8_t *)malloc(MIN(fileSize, 1024));
+    uint8_t *buffer = (uint8_t *)malloc(MIN(fileSize.unsignedLongLongValue, 1024));
     
     while (fd.hasBytesAvailable) {
         NSInteger len = [fd read:buffer maxLength:1024];
