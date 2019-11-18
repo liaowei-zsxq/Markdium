@@ -2,12 +2,14 @@
 
 ObjC wrapper for cmark-gfm, support iOS, macOS, tvOS.
 
-build staticlib with Carthage
+build upon [cmark-gfm](http://github.com/github/cmark-gfm)
+
+with Carthage
 ```
 github "cntrump/Markdium" "master"
 ```
 
-Build
+build staticlib
 ```
 carthage update Markdium
 ```
@@ -23,6 +25,31 @@ Swift
 ```
 import Markdium
 ```
+
+Supported Options
+- MDOptionDefault
+- MDOptionSourcePos
+- MDOptionHardBreaks
+- MDOptionSafe
+- MDOptionUnsafe
+- MDOptionNoBreaks
+- MDOptionValidateUTF8
+- MDOptionSmart
+- MDOptionGithubPreLang
+- MDOptionLiberalHTMLTag
+- MDOptionFootnotes
+- MDOptionStrikethroughDoubleTilde
+- MDOptionTablePreferStyleAttributes
+- MDOptionFullInfoString
+
+Supported Extensions
+- MDExtensionNone
+- MDExtensionTagFilter
+- MDExtensionAutolink
+- MDExtensionStrikethrough
+- MDExtensionTasklist
+- MDExtensionTable
+- MDExtensionAll
 
 ```objc
 NSString *str = @"[Github](https://github.com \"github\")";
