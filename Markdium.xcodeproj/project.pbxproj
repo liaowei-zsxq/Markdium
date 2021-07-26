@@ -621,14 +621,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -679,13 +680,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -695,14 +697,6 @@
 		15FC651A237E4EF700B5DFB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=appletvos*]" = arm64;
-				"ARCHS[sdk=appletvsimulator*]" = "$(ARCHS_STANDARD)";
-				"ARCHS[sdk=iphoneos*]" = (
-					arm64,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
-				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -724,34 +718,20 @@
 					"$(PROJECT_DIR)/cmark/build/src",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.Markdium;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2,3";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				"VALID_ARCHS[sdk=appletvos*]" = arm64;
-				"VALID_ARCHS[sdk=appletvsimulator*]" = "i386 x86_64";
-				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
-				"VALID_ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
-				"VALID_ARCHS[sdk=macosx*]" = "i386 x86_64";
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 			};
 			name = Debug;
 		};
 		15FC651B237E4EF700B5DFB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=appletvos*]" = arm64;
-				"ARCHS[sdk=iphoneos*]" = (
-					arm64,
-					armv7,
-				);
-				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -773,21 +753,13 @@
 					"$(PROJECT_DIR)/cmark/build/src",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.Markdium;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				"VALID_ARCHS[sdk=appletvos*]" = arm64;
-				"VALID_ARCHS[sdk=appletvsimulator*]" = "i386 x86_64";
-				"VALID_ARCHS[sdk=iphoneos*]" = "arm64e arm64 armv7s armv7";
-				"VALID_ARCHS[sdk=iphonesimulator*]" = "i386 x86_64";
-				"VALID_ARCHS[sdk=macosx*]" = "i386 x86_64";
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 			};
 			name = Release;
 		};
